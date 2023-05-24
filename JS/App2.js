@@ -23,3 +23,15 @@ Array.from(document.getElementsByClassName('Banner')).forEach((e, i) => {
     e.getElementsByTagName('a')[0].href = project[i].liveLink;
     e.getElementsByClassName('githubbutton').href = project[i].githubLink;
 })
+const rightArrow = document.getElementById('right');
+// right arrow 
+rightArrow.addEventListener('click', () => {
+  document.querySelector(".right-1").style.width = "100%";
+  document.querySelector(".right-2").style.width = "100%";
+  function after() {
+    setInterval(() => {
+      location.href = "Index.html";
+    }, 2000);
+  }
+  after();
+})
