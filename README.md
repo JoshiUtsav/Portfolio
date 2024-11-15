@@ -1,10 +1,32 @@
-# 🚀 **PORTFOLIO**
+# Portfolio
 
-Welcome to my portfolio!  
-This is where my passion for tech, coding, and a dash of creativity come together. Projects live, bugs tremble, and I squash them (usually) with the right blend of brute force and cleverness. But hey, no one’s perfect, right?
+Hi there, I'm Utsav Joshi 👋
 
-If you like **clean code**, you'll feel right at home.  
-If you're here for **memes**, you won't leave disappointed either.  
-And if you're here for **both**, then buckle up!
+I'm a full-stack developer specializing in backend—the brain of applications. I contribute to open-source, build scalable solutions, and open to freelance opportunities.
 
-Oh, and if you think my code is cool, wait till you hear my music playlist—guaranteed to be as good as my debugging skills.
+## Projects
+
+Here are some notable projects I have worked on:
+
+1. **GumAI**  
+   Description: A brief overview of the project, its purpose, and the technologies used.  
+   [View Project](#)
+
+2. **Constcode**  
+   Description: A brief overview of the project, its purpose, and the technologies used.  
+   [View Project](#)
+
+3. **Talkify**  
+   Description: A brief overview of the project, its purpose, and the technologies used.  
+   [View Project](#)
+
+
+## Contact
+
+Feel free to reach out to me via:
+
+- **Email**: [E-mail](mailto:utsavjoshi@gmail.com)
+- **LinkedIn**: [joshi-utsav](#)
+- **Twitter**: [joshi___utsav](#)
+
+Thank you for visiting my portfolio! I look forward to connecting with you.

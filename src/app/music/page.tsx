@@ -1,12 +1,8 @@
-import { SpotlightPreview } from "@/components/under-development";
 import React from "react";
+import { SpotlightPreview } from "@/components/under-development";
 
 const MyPlaylist = () => {
-  return (
-    <div>
-      <SpotlightPreview text="Under Development" />
-    </div>
-  );
+  return <SpotlightPreview text="Under Development" />;
 };
 
 export default MyPlaylist;

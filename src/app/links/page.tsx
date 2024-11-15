@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { IconLink } from "@tabler/icons-react";
+import { Icon } from "@/components/icons.svgs";
 
 const LinkData = [
   {
@@ -70,7 +70,7 @@ const SocialLink = () => {
                 }}
               >
                 {link.name}
-                <IconLink />
+                <Icon name="external-link" />
               </motion.div>
             </Link>
           ))}

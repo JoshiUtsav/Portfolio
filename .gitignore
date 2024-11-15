@@ -1,13 +1,7 @@
 # Environment variables
 .env
-.firebaserc
-firebase.json
-firestore.rules
-firestore.indexes.json
-storage.rules
 
 
-.firebase/
 # Dependencies
 node_modules/
 
@@ -18,4 +12,4 @@ node_modules/
 # Lock files
 package-lock.json
 yarn.lock
-TODO.md
+todo.md

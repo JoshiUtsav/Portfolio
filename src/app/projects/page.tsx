@@ -2,11 +2,7 @@ import React from "react";
 import { SpotlightPreview } from "@/components/under-development";
 
 const Work = () => {
-  return (
-    <div>
-      <SpotlightPreview text="Under Development"/>
-    </div>
-  );
+  return <SpotlightPreview text="Under Development" />;
 };
 
 export default Work;

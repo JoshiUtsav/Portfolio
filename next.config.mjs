@@ -12,11 +12,6 @@ const nextConfig = {
         hostname: "api.microlink.io",
         pathname: "/**",
       },
-      {
-        protocol: "https",
-        hostname: "firebasestorage.googleapis.com",
-        pathname: "/**",
-      },
     ],
   },
 };

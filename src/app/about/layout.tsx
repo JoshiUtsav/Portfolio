@@ -1,53 +1,60 @@
 import type { Metadata } from "next";
+import { JsonLd } from "react-schemaorg";
+import { Person, WithContext } from "schema-dts";
+import { SITE_CONFIG } from "@/config/site";
+import { getSeoMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About me | Developer",
+export const metadata: Metadata = getSeoMetadata({
+  title: "Utsav Joshi | Developer",
   description:
-    "Utsav Joshi, a GPU enthusiast who loves computer science, hardware, retro tech, and biking. Explore my portfolio and journey in tech.",
+    "Learn about Utsav Joshi, a developer passionate about creating innovative web solutions.",
+  path: "/about",
+  keywords: ["backend developer", "web development", "portfolio"],
   openGraph: {
-    title: "Utsav Joshi | Developer, Optimist, and Tech Enthusiast",
-    description:
-      "Very GPU-poor optimist, loves CS, hardware, retro, and bikes.",
-    type: "website",
-    url: "https://joshiutsav.vercel.app/",
     images: [
       {
-        url: "https://your-portfolio-url.com/og-image.jpg",
+        url: `${SITE_CONFIG.url}/images/utsav-joshi-profile.jpg`,
         width: 1200,
         height: 630,
-        alt: "Utsav Joshi Portfolio",
+        alt: "Utsav Joshi - Developer",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Utsav Joshi | Developer, Optimist, and Tech Enthusiast",
-    description:
-      "GPU-poor optimist, loves CS, hardware, retro tech, and biking.",
-    site: "@joshi__utsav",
-    // image: "", 
+    images: [`${SITE_CONFIG.url}/images/utsav-joshi-profile.jpg`],
   },
-  robots: "index, follow",
-  keywords: [
-    "Utsav Joshi",
-    "developer portfolio",
-    "GPU enthusiast",
-    "hardware developer",
-    "retro tech",
-    "biking",
-    "software engineering",
-    "Next.js portfolio",
-    "web developer",
-  ],
-  alternates: {
-    canonical: "https://joshiutsav.vercel.app/",
-  },
-};
+});
 
-export default function AboutLayout({
-  children,
-}: Readonly<{
+interface AboutLayoutProps {
   children: React.ReactNode;
-}>) {
-  return <>{children}</>;
+}
+
+export default function AboutLayout({ children }: Readonly<AboutLayoutProps>) {
+  const jsonLd: WithContext<Person> = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: SITE_CONFIG.author.name,
+    url: SITE_CONFIG.url,
+    jobTitle: SITE_CONFIG.author.jobTitle,
+    sameAs: SITE_CONFIG.author.socialProfiles,
+    description:
+      "A developer with expertise in web development and a passion for creating innovative solutions.",
+    image: `${SITE_CONFIG.url}/images/utsav-joshi-profile.jpg`,
+    alumniOf: {
+      "@type": "EducationalOrganization",
+      name: "Your University Name",
+    },
+    knowsAbout: ["Web Development", "JavaScript", "React", "Next.js", "SEO"],
+  };
+
+  return (
+    <>
+      <JsonLd<Person> item={jsonLd} />
+      <main id="main-content">
+        <h1 className="sr-only">Utsav Joshi</h1>
+        {children}
+      </main>
+    </>
+  );
 }

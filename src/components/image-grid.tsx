@@ -34,10 +34,7 @@ const imageVariants = {
 // ImageComponent to fetch individual images
 const ImageComponent = ({ imageName }: { imageName: string }) => {
   const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  console.log("Image name:", imageName);
-  
+  const [loading, setLoading] = useState(true);  
 
   return (
     <div>

@@ -6,7 +6,7 @@ import { FloatingDockDemo } from "@/components/floating-nav";
 import Link from "next/link";
 import { ModeToggle } from "@/components/ui/darkmode";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { IconHome } from "@tabler/icons-react";
+import { Icon } from "@/components/icons.svgs";
 import Banner from "@/components/banner";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -91,7 +91,7 @@ export default async function RootLayout({
                       alt="Utsav Joshi"
                     />
                     <AvatarFallback>
-                      <IconHome className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
+                      <Icon name="home" className="h-6 w-6 text-neutral-500 dark:text-neutral-300" />
                     </AvatarFallback>
                   </Avatar>
                 </Link>

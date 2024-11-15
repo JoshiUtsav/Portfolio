@@ -3,55 +3,50 @@
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
-  IconBriefcase2,
-  IconTournament,
-  IconUserCircle,
-  IconMusic,
-} from "@tabler/icons-react";
+  Icon
+} from "@/components/icons.svgs";
 
 export function FloatingDockDemo() {
   const links = [
     {
-      title: "Work",
+      title: "Projects",
       icon: (
-        <IconBriefcase2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="briefcase" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/work",
+      href: "/projects",
     },
     {
       title: "Content",
       icon: (
-        <IconTournament className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="tournament" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/content",
     },
     {
       title: "Music",
       icon: (
-        <IconMusic className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="music" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/music",
     },
     {
       title: "Twitter",
       icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="x" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://twitter.com/joshi__utsav/",
     },
     {
       title: "Github",
       icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="github" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "https://github.com/joshiUtsav/",
     },
     {
       title: "Me",
       icon: (
-        <IconUserCircle className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <Icon name="user-circle" className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/about",
     },
